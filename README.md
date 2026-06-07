@@ -1,4 +1,4 @@
-# 🔍 CodeSmellDetector
+#  CodeSmellDetector
 
 A fine-tuned [`microsoft/codebert-base`](https://huggingface.co/microsoft/codebert-base) model for detecting **5 classes of Python code smells**, trained on a hybrid dataset of real open-source code and synthetic hard examples.
 
@@ -16,7 +16,7 @@ A fine-tuned [`microsoft/codebert-base`](https://huggingface.co/microsoft/codebe
 
 ---
 
-## 🏗️ Architecture & Pipeline
+## Architecture & Pipeline
 
 ```
 Real Repos (43 OSS codebases)
@@ -46,7 +46,7 @@ Real Repos (43 OSS codebases)
 
 ---
 
-## 📦 Dataset Construction
+##  Dataset Construction
 
 ### Real Data Sources
 
@@ -77,7 +77,7 @@ Final dataset is balanced to **12,000 examples per class (60,000 total)**, split
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Install Dependencies
 
@@ -150,7 +150,7 @@ print(response.json())
 
 ---
 
-## 🌐 API Reference
+##  API Reference
 
 ### `POST /predict`
 
@@ -188,7 +188,7 @@ Classify a Python code snippet.
 
 ---
 
-## ⚙️ Heuristic Fallback
+##  Heuristic Fallback
 
 A lightweight AST-based fallback catches god classes that the model predicts as `clean_code`:
 
@@ -204,7 +204,7 @@ This compensates for the model's tendency to under-predict god classes at the bo
 
 ---
 
-## 🏋️ Training Configuration
+## Training Configuration
 
 | Parameter | Value |
 |-----------|-------|
@@ -221,7 +221,7 @@ This compensates for the model's tendency to under-predict god classes at the bo
 
 ---
 
-## 📊 Evaluation
+##  Evaluation
 
 Two evaluation modes are provided:
 
@@ -256,7 +256,7 @@ TRUE (real code only)       : ~82%  ← what actually matters
 
 ---
 
-## 🔧 Thresholds
+## Thresholds
 
 All detection thresholds are defined in Cell 4 and can be adjusted:
 
@@ -271,7 +271,7 @@ FEATURE_ENVY_THRESHOLD  = 3    # Min external references for feature envy
 
 ---
 
-## 📝 Notes
+##  Notes
 
 - Test files are excluded from snippet extraction (filenames containing `"test"`).
 - Snippets shorter than 50 characters or longer than 8,000 characters are skipped.
@@ -280,6 +280,6 @@ FEATURE_ENVY_THRESHOLD  = 3    # Min external references for feature envy
 
 ---
 
-## 📄 License
+##  License
 
 MIT
